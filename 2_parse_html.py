@@ -8,11 +8,11 @@ def parse_http(http):
     return  method, path, protocol, headers, body
 
 '''
-Este ejemplo de parsing sirve para un ejemplo sencillo de request de HTTTP
-Sin embargo la forma en la que se hace un parsing de manera estándar es dividiendo los headers y el body por un doble salto.
-De esa manera se evita el riesgo de que dentro del body haya saltos de línea que puedan crear headers incorrectos.
+This parsing example is for a simple HTTP request.
+However, the standard way to parse is by splitting the headers and body with a double line break.
+This avoids the risk of line breaks within the body that could create incorrect headers.
 
-Ejemplo de un request que puede manejar este parser:
+Example of a request that can handle this parser:
 GET / HTTP/1.1
 Host: localhost:8000
 Connection: keep-alive
